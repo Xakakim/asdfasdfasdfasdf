@@ -1,0 +1,77 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(694, 599)
+        self.time_btn_5m = QtWidgets.QRadioButton(Form)
+        self.time_btn_5m.setGeometry(QtCore.QRect(438, 500, 51, 16))
+        self.time_btn_5m.setObjectName("time_btn_5m")
+        self.time_btn_10m = QtWidgets.QRadioButton(Form)
+        self.time_btn_10m.setGeometry(QtCore.QRect(481, 500, 51, 16))
+        self.time_btn_10m.setObjectName("time_btn10m")
+        self.time_btn_30m = QtWidgets.QRadioButton(Form)
+        self.time_btn_30m.setGeometry(QtCore.QRect(530, 500, 51, 16))
+        self.time_btn_30m.setObjectName("time_btn_30m")
+        self.time_btn_1h = QtWidgets.QRadioButton(Form)
+        self.time_btn_1h.setGeometry(QtCore.QRect(584, 498, 51, 20))
+        self.time_btn_1h.setObjectName("time_btn_1h")
+        self.Start = QtWidgets.QPushButton(Form)
+        self.Start.setGeometry(QtCore.QRect(446, 540, 110, 41))
+        self.Start.setObjectName("Start")
+        self.label = QtWidgets.QLabel(Form)
+        self.label.setGeometry(QtCore.QRect(436, 20, 241, 20))
+        self.label.setObjectName("label")
+        self.Text = QtWidgets.QTextEdit(Form)
+        self.Text.setGeometry(QtCore.QRect(437, 49, 241, 410))
+        self.Text.setObjectName("Text")
+        self.Stop = QtWidgets.QPushButton(Form)
+        self.Stop.setGeometry(QtCore.QRect(566, 540, 110, 41))
+        self.Stop.setObjectName("Stop")
+        self.label_2 = QtWidgets.QLabel(Form)
+        self.label_2.setGeometry(QtCore.QRect(436, 465, 241, 16))
+        self.label_2.setObjectName("label_2")
+        self.label_5 = QtWidgets.QLabel(Form)
+        self.label_5.setGeometry(QtCore.QRect(21, 20, 400, 16))
+        self.label_5.setObjectName("label_5")
+        self.tableWidget = QtWidgets.QTableWidget(Form)
+        self.tableWidget.setGeometry(QtCore.QRect(16, 49, 411, 531))
+        self.tableWidget.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(1)
+        self.tableWidget.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        self.time_btn_3h = QtWidgets.QRadioButton(Form)
+        self.time_btn_3h.setGeometry(QtCore.QRect(640, 500, 51, 16))
+        self.time_btn_3h.setObjectName("time_btn_3h")
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.time_btn_5m.setText(_translate("Form", "5분"))
+        self.time_btn_10m.setText(_translate("Form", "10분"))
+        self.time_btn_30m.setText(_translate("Form", "30분"))
+        self.time_btn_1h.setText(_translate("Form", "1시간"))
+        self.Start.setText(_translate("Form", "홍보시작"))
+        self.label.setText(_translate("Form", "                        홍보문구"))
+        self.Stop.setText(_translate("Form", "홍보중지"))
+        self.label_2.setText(_translate("Form", "                      시간 타이머"))
+        self.label_5.setText(_translate("Form", "                                   텔레그램 그룹 상태창"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("Form", "그룹 리스트"))
+        self.time_btn_3h.setText(_translate("Form", "3시간"))
+
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Form = QtWidgets.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
